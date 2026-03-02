@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Kevin & Ayza - Nos Casamos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom,#fdf6f0,#f7e7d7);
+    text-align:center;
+    color:#6b4f3b;
+}
+
+.container{
+    padding:50px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-weight:normal;
+}
+
+.details{
+    margin-top:25px;
+    font-size:20px;
+}
+
+.highlight{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.message{
+    margin-top:30px;
+    font-style:italic;
+    font-size:20px;
+}
+
+.button{
+    display:inline-block;
+    margin:15px;
+    padding:15px 28px;
+    font-size:18px;
+    color:white;
+    background:#b8895b;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#9c6f47;
+}
+
+footer{
+    margin-top:40px;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Música de fondo -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h2>¡Nos Casamos!</h2>
+    <h1>Kevin & Ayza</h1>
+
+    <div class="details">
+        <p>Ceremonia Civil</p>
+        <p class="highlight">12 / 03 / 26</p>
+        <p>11:30 am</p>
+        <p>Casa de la Cultura del distrito de San Miguel</p>
+    </div>
+
+    <div class="message">
+        <p>Los invitamos a ser parte de este día especial.</p>
+        <p>Agradecemos su compañía.</p>
+        <p><strong>Dress Code: Elegante</strong></p>
+        <p>No se olviden de traer regalos 🎁</p>
+    </div>
+
+    <!-- 📍 Ubicación -->
+    <a class="button"
+       href="https://www.google.com/maps/search/Casa+de+la+Cultura+San+Miguel"
+       target="_blank">
+       Ver Ubicación
+    </a>
+
+    <!-- ✅ RSVP WhatsApp -->
+    <a class="button"
+       href="https://wa.me/51999999999?text=Hola%20Kevin%20y%20Ayza,%20confirmo%20mi%20asistencia%20a%20su%20boda"
+       target="_blank">
+       Confirmar Asistencia (RSVP)
+    </a>
+
+    <footer>
+        Con amor ❤️ Kevin & Ayza
+    </footer>
+</div>
+
+</body>
+</html>
