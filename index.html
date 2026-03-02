@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Kevin & Ayza - Nos Casamos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom,#fdf6f0,#f7e7d7);
+    text-align:center;
+    color:#6b4f3b;
+}
+
+.container{
+    padding:40px 20px;
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-weight:normal;
+}
+
+.photo{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    margin:25px auto;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.countdown{
+    font-size:28px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#b8895b;
+}
+
+.details{
+    margin-top:20px;
+    font-size:20px;
+}
+
+.button{
+    display:inline-block;
+    margin:12px;
+    padding:15px 28px;
+    font-size:18px;
+    color:white;
+    background:#b8895b;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#9c6f47;
+}
+
+.message{
+    margin-top:25px;
+    font-style:italic;
+    font-size:20px;
+}
+
+footer{
+    margin-top:35px;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Música -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h2>¡Nos Casamos!</h2>
+    <h1>Kevin & Ayza</h1>
+
+    <!-- 📸 FOTO -->
+    <img src="foto.jpg" class="photo" alt="Kevin y Ayza">
+
+    <!-- ⏳ CUENTA REGRESIVA -->
+    <div class="countdown" id="countdown"></div>
+
+    <div class="details">
+        <p><strong>12 / 03 / 26 — 11:30 am</strong></p>
+        <p>Casa de la Cultura del distrito de San Miguel</p>
+    </div>
+
+    <div class="message">
+        <p>Los invitamos a ser parte de este día especial.</p>
+        <p>Agradecemos su compañía.</p>
+        <p><strong>Dress Code: Elegante</strong></p>
+        <p>No se olviden de traer regalos 🎁</p>
+    </div>
+
+    <a class="button"
+       href="https://www.google.com/maps/search/Casa+de+la+Cultura+San+Miguel"
+       target="_blank">
+       📍 Ver Ubicación
+    </a>
+
+    <!-- ⚠️ CAMBIA TU NÚMERO -->
+    <a class="button"
+       href="https://wa.me/51999999999?text=Hola%20Kevin%20y%20Ayza,%20confirmo%20mi%20asistencia%20a%20su%20boda"
+       target="_blank">
+       ✅ Confirmar Asistencia
+    </a>
+
+    <footer>
+        Con amor ❤️ Kevin & Ayza
+    </footer>
+</div>
+
+<script>
+// 🎯 FECHA DE LA BODA (AÑO, MES-1, DIA, HORA, MIN)
+const fechaBoda = new Date(2026, 2, 12, 11, 30, 0).getTime();
+
+const countdown = document.getElementById("countdown");
+
+setInterval(() => {
+    const ahora = new Date().getTime();
+    const distancia = fechaBoda - ahora;
+
+    const dias = Math.floor(distancia / (1000*60*60*24));
+    const horas = Math.floor((distancia % (1000*60*60*24)) / (1000*60*60));
+    const minutos = Math.floor((distancia % (1000*60*60)) / (1000*60));
+    const segundos = Math.floor((distancia % (1000*60)) / 1000);
+
+    countdown.innerHTML =
+        `Faltan ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+
+    if (distancia < 0) {
+        countdown.innerHTML = "¡Hoy es el gran día! 💍";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
